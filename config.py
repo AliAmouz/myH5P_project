@@ -1,6 +1,6 @@
 import os
 
 class Config:
-    SECRET_KEY = os.urandom(24)
-    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:3.141592@localhost/h5p_test'
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'mysql+pymysql://root:3.141592@localhost/h5p_test'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
