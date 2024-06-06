@@ -29,7 +29,7 @@ This project is an interactive video platform built with H5P, Flask, JavaScript,
 
 1. Start the Flask server:
    ```
-   python app.py
+   python server.py
    ```
 2. Open your web browser and navigate to `http://localhost:8000`.
 
