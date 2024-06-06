@@ -23,7 +23,17 @@ This project is an interactive video platform built with H5P, Flask, JavaScript,
 3. Install the required dependencies:
    ```
    pip install -r requirements.txt
+   
    ```
+4.make sure to configure the database:
+```
+import os
+
+class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'mysql+pymysql://username:password@localhost/h5p_test'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+```
 
 ## Usage
 
